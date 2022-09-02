@@ -77,7 +77,7 @@ function RegisterForm() {
               <option value={''}>Select gender</option>
               <option value={'male'}>Male</option>
               <option value={'female'}>Female</option>
-              <option selected value={'other'}>Other</option>
+              <option value={'other'}>Other</option>
             </select>
             {errors.lastName && (
               <span className={'form-error'}>{errors.gender?.message}</span>
