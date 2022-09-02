@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #__next {
+    @apply h-[100%];
+  }
+
+  body {
+    @apply font-body text-[#232428] bg-black text-white;
+  }
+
+  a {
+    @apply inline-flex;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+  }
+
+  input {
+    @apply bg-transparent;
+  }
+
+  select {
+    --tw-shadow: 0 0 #0000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-radius: 0;
+    border-width: 1px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  select {
+    print-color-adjust: exact;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  section {
+    @apply py-5;
+  }
+
+  .layout {
+    @apply min-h-full flex flex-col;
+  }
+
+  .main {
+    @apply flex flex-col flex-auto;
+  }
+}
+
+@layer components {
+  .header {
+    @apply shadow-md;
+  }
+  .header-content {
+    @apply flex items-center justify-between py-4;
+  }
+
+  .logo {
+    @apply h-[41px];
+  }
+
+  .register-page {
+    @apply flex items-center justify-between flex-auto;
+  }
+  .register-form {
+
+  }
+  .form-groups {
+    @apply flex flex-col gap-y-2 max-w-[400px] mx-auto;
+  }
+  .form-group {
+    @apply flex flex-col;
+  }
+  .form-label {
+    @apply text-[12px] mb-1;
+  }
+  .form-input {
+    @apply p-2 bg-black focus-visible:outline-none border border-violet-800;
+  }
+  .form-input.invalid {
+    @apply border-red-500 border-red-500;
+  }
+  .form-error {
+    @apply text-[13px] pt-1 text-red-600;
+  }
+  .form-gender {
+    @apply bg-black border border-violet-800 focus:ring-violet-800 block w-full p-2;
+  }
+  .form-btn {
+    @apply bg-violet-800 text-white px-4 py-3;
+  }
+}
